@@ -1,0 +1,9 @@
+/node_modules
+/dist
+*.pem
+.env
+auth.json
+manifest*.json
+manifest-dev.json
+yarn.lock
+yarn-error.log

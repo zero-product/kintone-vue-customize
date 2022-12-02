@@ -1,0 +1,20 @@
+{
+  "app": "<APP ID>",
+  "scope": "<ALL | ADMIN | NONE>",
+  "desktop": {
+    "js": [
+      "https://localhost:3000/app.min.js"
+    ],
+    "css": [
+      "https://localhost:3000/app.min.css"
+    ]
+  },
+  "mobile": {
+    "js": [
+      "https://localhost:3000/app.min.js"
+    ],
+    "css": [
+      "https://localhost:3000/app.min.css"
+    ]
+  }
+}

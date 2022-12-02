@@ -1,0 +1,49 @@
+{
+  "name": "kintone-vue-customize",
+  "version": "1.0.0",
+  "description": "kintone Customization Project",
+  "author": "k.Nishizoe",
+  "license": "MIT",
+  "dependencies": {
+    "@kintone/rest-api-client": "^1.12.1",
+    "dayjs": "^1.11.5",
+    "dotenv-webpack": "^8.0.1",
+    "kintone-vue-component": "^1.0.0",
+    "vue": "2.x",
+    "vue-loader": "15.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@cybozu/eslint-config": ">=7.1.0",
+    "@kintone/customize-uploader": "^2.0.5",
+    "@kintone/plugin-packer": "^2.0.7",
+    "@kintone/plugin-uploader": "3.0.5",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.27.10",
+    "core-js": "^3.2.1",
+    "css-loader": "^2.1.0",
+    "esbuild": "^0.15.7",
+    "esbuild-envfile-plugin": "^1.0.3",
+    "esbuild-loader": "^2.20.0",
+    "esbuild-vue": "^1.2.1",
+    "eslint": "^6.5.1",
+    "fs-extra": "^10.1.0",
+    "local-web-server": "^2.6.1",
+    "node-powershell": "^5.0.1",
+    "regenerator-runtime": "^0.13.3",
+    "style-loader": "^0.23.1",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "scripts": {
+    "initial": "yarn install && mkcert localhost && node scripts/init",
+    "dev": "set NODE_ENV=\"development\" && node scripts/deploy --serve && node scripts/build.js --serve",
+    "build": "set NODE_ENV=\"production\" && node scripts/build.js",
+    "lint": "eslint  --ext .js",
+    "lint-fix": "eslint  --ext .js --fix",
+    "deploy": "yarn build && node scripts/deploy",
+    "deploy:mac": "yarn build && scripts/deploy.sh"
+  }
+}
